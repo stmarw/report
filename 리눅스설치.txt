@@ -1,0 +1,66 @@
+리눅스 설치하는법 
+https://releases.ubuntu.com/18.04/
+https://virtualbox.org/
+
+
+실행하는법 ./ecl 탭 자동완성 엔터
+패키지 최신내용으로 변경
+sudo apt update  su는 사용자 
+sudo apt install openjdk-8-jdk
+--파일에 대한 모든 권한주기
+sudo chmod 777 파일이름  << 권한변경하는겨 탭하면 자동완성됨
+--dkqcnrvnfrl
+tar -xvf압축파일명(.tar or .tar.gz
+
+ls
+cd dow 탭 자동채우기
+
+ls = 리스트 약자
+
+ls -a ls -all
+
+권한 변경
+sudo chmod 777 ecl 탭하면 자동완성
+후 다시 ls -all
+상위폴더 점두개 슬래시 .. /
+sudo apt update
+sudo apt install mysql.server
+mysql - uroot
+service mysql status
+crtl+c --> status 빠져나오기
+sudo mysql
+----------------------
+alter user 'root'@'localhost' identified
+with mysql_native_password by '1234'
+==db 생성
+create database test;
+==db 확인
+이클립스 실행하는 방법
+
+=========================================
+1.use test 
+2
+3 create table testTBL{
+4    seq integer auto_increment primary key.
+5    user_name varchar(20) not null.
+6    join_date date not null,
+7    regi_date datetime not null,
+8    stop_date timestamp not null
+9);
+10 insert into testTBL(user_name,  join_date,regi_date,stop_date,stop_date,
+11 values('kim',now(),now(),now());
+12 select * from testTBL;
+==========================
+1.use test 
+2
+3 create table testTBL{
+4    seq integer auto_increment primary key.
+5    user_name varchar(20) not null.
+6    join_date date not null,
+7    regi_date datetime not null,
+8    stop_date timestamp not null
+9);
+10 insert into testTBL(user_name,  join_date,regi_date,stop_date,stop_date,
+11 values('김',now(),now(),now());
+12 select * from testTBL;
+---------------------------------
