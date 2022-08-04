@@ -1,0 +1,788 @@
+	프로그램:목적달성을 위한 작업지시(문장)의 결합 /  문장들의 집합체
+
+프로그래밍: 
+파이썬 장점 : 배우기 용이, 라이브러리(언어세팅이 되어있음 )를 이용하여 코드를 짬, 
+문법이 비교적 간단함. 
+---------------------------
+단어/데이터/식별자(변수 ) / 연산자  >> (작업지시)문장의 구성
+문장:코드의 최소단위 (데이터값을 변환시켜주는 역할을 함) 
+리터럴: 내가지정한 하나의 값/ 소스코드의 고정된 값을 대표하는 용어
+print: 개발자가 원하는 리터럴을 출력해주는 함수
+\t : 띄어쓰기 / tab 자동완성 
+1고정되어있는 요소 제거/ 반복적 요소 제거= 하드코딩(파이/오일러상수)
+print("n\t")#n=1~31 
+-------------------------
+달력 만들기
+day = 1
+print("\t\t\t2022년 6월")
+print("일\t월\t화\t수\t목\t금\t토")
+for i in range(1,32):
+    day = i
+    print(day,"\t",end='')
+    if day == 7:
+        print()
+    if day == 14:
+        print()
+    if day == 21:
+        print()
+    if day == 28:
+        print()
+print("a")
+반복문 : for i변수  in키워드 range / \t 매개변수
+day = 1
+print("\t\t\t2022년 6월")
+print("일\t월\t화\t수\t목\t금\t토")
+for i in range(1,32):
+    day = i
+    print(day,"\t",end='')
+    if day%7 == 0:
+        print()
+    
+
+프로그램작성시 해야할 2가지 작업
+고정제거 =>변수사용
+반복제거 -> 반복문(for)
+어떤 한 문장을 실행할지 안할지 결정하는 것은 조건문이다.
+반복문에 사용하는 키워드 for in :, 들여쓰기 ,  
+조건문 if 
+-----------------------
+number =928
+print(number)
+for i in range(3):
+    split_number=number% 10
+    print(split_number)
+    number = number //10 숫자 쪼개기
+문자열 숫자로 변환int(정수) !float(음수)
+숫자를 문자열로 변환 str 
+
+a =928
+for i in range(3):
+    b=a % 10
+    print(b)
+    a =a//10숫자 쪼개기
+
+for i in range(1,10):
+    print(i)
+--------------
+1에서10까지 세로로 출력하는 코드작성
+반복문 이용
+
+for i in range(1,11):
+    print(i)
+
+number = 0
+num1= 1
+num2=13
+for i in range(num1,num2):
+     print(i)
+n=1
+m=11
+for i in range(n,m):
+    print(i)
+
+def print_number(num1,num2):
+    n=1
+    m=11
+    for i in range(n,m):
+        print(i)
+print_number(1,11)
+
+def print_number(num1,num2):
+    n=num1
+    m=num2
+    for i in range(n,m):
+        print(i)
+
+a= input("input number please >>>")
+print(a)
+
+def print_number(n1,n2):
+    for i in range(n1,n2+1):
+        print(i)
+-----------------------------------
+a= input("input number please >>>")
+b= input("input number please >>>")
+#print(a)
+a= int(a)
+b= int(b)
+print_number(a,b)
+----------------------------
+함수:코드의 집합
+매개변수: 함수에 자료를 넣는것
+리턴값 : 함수를 호출해서 최종적으로 나오는 결과를 지칭하는말
+기본적인 형태
+def 함수이름(매개변수 , 매개변수)  -> def print_n_times(value,n) 
+print_n_times(n,*value)
+prin 
+ list(range(0,10,2))
+-------------------------
+while 문은 무한반복문
+무한 -> 끝나는 시점을 모름
+
+number =1
+while True:
+    split_number=number%10
+    print(split_number)
+    number=number//10
+    if number==0:
+        break
+        
+number =9865
+split_number=number%10
+print(split_number)
+number=number//10
+split_number=number%10
+print(split_number)
+number=number//10
+split_number=number%10
+print(split_number)
+number=number//10
+split_number=number%10
+print(split_number)
+number=number//10
+split_number=number%10
+print(split_number)
+number=number//10
+
+
+m=2
+for_in range(8):
+
+    n=0
+    for_in range(9):
+        n=n+1
+        print(m,'x',n,'='',m*n)
+    print()
+    m=m+1
+
+for m in range(2,9+1):
+    for n in range(1,9+1):
+        print(m,'x',n,'=',m*n)
+    print()	
+
+for m in range(2,9+1):
+    if m ==3:
+        continue
+    for n in range(1,9+1):
+        print(f"{m}x{n}={m*n:3}")
+    print()
+   #break:
+구구단
+for m in range(2,10+1):
+    for n in range(1,9+1):
+        print(m,'x',n,'=',m*n)
+    print()
+
+for m in range(2,10):
+    if m==3 or m==6 or m==9:
+        continue
+   
+    for n in range(2,10):
+        print(f"{m}x{n}={m*n:3}")
+    print()
+
+자체시험보는 사이트
+https://codeup.kr/problemsetsol.php?psid=33
+
+continue 
+어떤 조건을 만족했을때 해당 코드를 넘겨버림 
+146p
+for m in range(2,9+1):
+    if m ==3:
+        continue
+    for n in range(1,9+1):
+        print("{}x{}={:2}".format(m,n,m*n))
+    print()
+   #break:
+{:2} 세밀하게다룸 137p
+
+소문자를 대문자로 141p
+word="hello"
+print(word)
+
+word= "hello ~world"
+print(word.upper())
+a=word.upper()
+print(a)
+word=word.upper()
+print(word)
+글자 나누기 
+for letter in "hello":     145p
+    print(letter)
+데이터를 모을때는 대괄호 사용 
+ 글자 추출
+for n in range(5):
+    print(word[n])
+
+3의배수 함수
+number="123"
+for num in number:
+    print(int(num)*3)
+
+def split_number(nubmer):
+    for num in number:
+        print(int(num)*3)
+
+->
+split_number("1234")
+
+word="hello world"
+print(word[0:5])
+ㅇ
+
+#어떤 년도의 2월이 윤년인지 평년인지 판별하여 마지막 날을 결정한다.
+#28.29
+#년도를 400으로 나누어 떨어지거나
+#년도를 4로 나누어 떨어지고 100으로 나누어 떨어지지 않는 경우
+#2000년도가 윤년인지 평년인지 판별하는 코드 작성
+year = 2000
+#is_leap_year
+if year% 400==0 or (year%4==0 and year% 100 !=0) :
+    print('윤년')
+else:
+    print('평년')
+
+def is_leap_year(year):
+    if year% 400==0 or (year%4==0 and year% 100 !=0) :
+        print('윤년')
+    else:
+        print('평년')
+for i in range(2000,2023):
+    is_leap_year(i)
+-------------------------------------------
+#윤년이면 28 return / 평년이면 29 return
+#get_feb_lastday -> 년도를 받아 윤년이면 29리턴 아니면 28리턴
+def get_feb_lastday(year):
+    lastday = 0
+    if year% 400==0 or (year%4==0 and year% 100 !=0) :
+        lastday=29
+    else:
+        lastday=28
+    return lastday
+
+result= get_feb_lastday(2022)
+print(result)
+----------------------
+end=가로연산자
+코딩
+6/29
+
+달력 코드(교수님스타일)
+print("\t\t\t2022년6월")
+print("일\t월\t화\t수\t목\t금\t토")
+print("\t\t\t",end='')
+for n in range(1,30+1): 
+    print(n,"\t",end='')
+    if n== 4 or n ==11 or n == 18 or n==25:
+        print()
+     
+        
+
+함수 지정
+def_
+함수 이름 설정하고 +( ) : 콜론 필수!
+ex)
+def juan1():
+    print("\t\t\t2022년6월")
+    print("일\t월\t화\t수\t목\t금\t토")
+    for i in range(1,32):
+        day=i
+        print(day,"\t",end='')
+        if day%7==0:
+            print()
+호출하는 방법
+함수이름 ( )
+ex juan1( )
+
+추가정보주는것 매개변수 지정해야함 
+6월달력으로 1월~12월까지 사용할수 있게끔 유연하게 만들기
+
+파라매터에 숫자를 넣어서 유연하게 변경
+def juanv2():
+    print("\t\t\t2022년6월")
+    print("일\t월\t화\t수\t목\t금\t토")
+    print("\t\t\t",end='')
+    for n in range(1,30+1): 
+        print(n,"\t",end='')
+        if n%7==4:
+            print()
+     
+하드코딩은 중괄호로 바꿔서 바꿔줌,
+
+    def juanv3(month):
+    print("\t\t\t2022년{}월".format(month))
+    print("일\t월\t화\t수\t목\t금\t토")
+    print("\t\t\t",end='')
+    for n in range(1,30+1): 
+        print(n,"\t",end='')
+        if n%7==4:
+            print()
+     
+  *바꿀때 유의사항 : 마지막날일수가 30일인지 31일인지 확인
+
+   v3    
+   def juanv3(month):
+    print("\t\t\t2022년{}월".format(month))
+    print("일\t월\t화\t수\t목\t금\t토")
+    space=3
+    last_day=30
+    for _ in range(space):
+        print("\t\t\t",end='')
+    for n in range(1,last_day+1): 
+        print(n,"\t",end='')
+        if (n+space)%7==4:
+            print()
+     
+        v4
+
+def juanv4(month,s,day):
+    print("\t\t\t2022년{}월".format(month))
+    print("일\t월\t화\t수\t목\t금\t토")
+    space=s
+    last_day= day
+    for _ in range(space):
+        print("\t",end='')
+    for n in range(1,last_day+1): 
+        print(n,"\t",end='')
+        if (n+space)%7==0:
+            print()
+     
+     juanv4(9,4,30)  해당월 9월 스페이스 4 , 마지막날 30 
+
+def juan(month):
+    print(f"\t\t\t2022년{month}월")
+    print("일\t월\t화\t수\t목\t금\t토")
+    space=[6,2,2,5,0,3,5,1,4,6,2,4]
+    last_day=[31,28,31,30,31,30,31,31,30,31,30,31]
+    for _ in range(space[month-1]):
+        print("\t",end='')
+    for n in range(1,last_day[month-1]+1): 
+        print(n,"\t",end='')
+        if (n+space[month-1])%7==0:
+            print()
+
+juan(2)
+
+for i in range(1,12+1):
+    juan(i)
+    print()
+    print()
+ --------------------------------
+모르는거 적어놓기 
+ 함수호출할때 ,
+juan4( 변수 갯수 입력 , 호출월 입력 , 해당월의 마지막날 입력)
+
+a= "hello"
+print(a[0])
+
+  
+info="kin,11,22,33"
+data=info.split(',')
+print(data)
+
+info="kin,11,22,33"
+data=info.split(',')
+print(data[2])
+
+배열되어있는 ㅅ페이스를 찾아서 리스트로 만들어보시오,
+
+
+else 뜻
+그렇지 않으면 : 
+ex if 달다면: 
+            삼킨다.
+  else:
+	뱉는다
+elif(조건을 여러개 주는 부호
+c = 15 * 5
+d = 15 + 15 + 15 + 15 + 15 + 15
+if c > d:
+    print('c is greater than d')
+elif c == d:
+     print('c is equal to d')
+else:
+     print('c is less than d')
+
+
+
+
+c=15*5
+d= 15+15+15+15+15
+if c > d:
+	print('c is equal to d')
+     elif c = d:
+	print('c is less than d')
+     else:
+	print('i dont/'t know')
+c is equal to d
+반복문에서 탈출할때 break 써야함 
+ex 
+ filename: ten.py
+max = 10
+while True:
+    num = int(input())
+    if num > max:
+        print(num, 'is too big!')
+        break
+------------------------
+str함수사용 int float  ------------------배운거아님
+a= 100
+b= "apple"
+str(a)+b
+--------------------------------------------------
+누적 카운트 하는법
+total=0
+for k in range(1,10+1,):
+    total=k
+    print(k,end=' ')#-1~10
+print()
+print(total)
+결과 -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+누적 셈 
+total=0
+for k in range(1,10+1,):
+    total +=k
+    print(k,end=' ')#-1~10
+print()
+print(total)
+----------------
+swap 교환
+def calcu_total(num1,num2):
+    total= 0
+    if num1 > num2:
+        temp = num1
+        num1 = num2
+        num2= temp
+    for k in range(num1,num2+1,):
+        total = total+ k
+    print(total)
+랜덤수만들기
+1. import random
+
+2 a= random.random()#0.0<=rnd<1.0
+print(a)
+
+3 b=random.randrange(1,100+1)
+print(b)
+
+======================================================
+while true 는 무한반복문이라서 , break 가 보통 함께 하는편임
+
+number_list =[]
+while True:
+    temp = random.randrange(1,100+1)
+    if temp not in number_list:
+        number_list.append(temp)
+        
+        if len(number_list)==10:
+            break
+
+print(len(number_list),number_list)
+
+max= number_list[0]
+for val in number_list[1:]:
+    #print(val,end=' ')
+    if val > max:
+        max=val
+    pass
+print(max)
+
+a=number_list[1:len(number_list)]
+a=number_list[1:10]
+a=number_list[1:]
+print(a)
+----------------------------------------
+#1등에서 5등까지 산출
+#1부터 45까지 숫자를 가진 공이 들어가있는 볼통을 코드로 표현하기
+랜덤함수같은경우 호출을 해줘야함!!import 는 random을 호출하기 위한 명령어 같은 개념임
+*while 문은 무한반복문
+무한 -> 끝나는 시점을 모름
+
+import random
+
+넘버리스트 [] 같은경우
+number_list =[]
+while True:
+    temp = random.randrange(1,44+1)
+    if temp not in number_list:
+        number_list.append(temp)
+        
+        if len(number_list)==6:
+            break
+
+print(len(number_list),number_list)
+-------------------------------------
+len ? temp ? append
+len 문자열의 개수
+
+. append() : 리스트 마지막에 요소 추가
+2. extend() : 모든 요소를 리스트에 추가
+3. insert() : index에 요소 추가
+
+-------------------------------------
+def call_calendar(month):
+    print(f"\t\t\t2022년 {month}월")
+    print("일\t월\t화\t수\t목\t금\t토")
+    space = [6,2,2,5,0,3,5,1,4,6,2,4]
+    last_day = [31,28,31,30,31,30,31,31,30,31,30,31]
+    for _ in range(space[month-1]):
+        print("\t",end='')
+    for i in range(1,last_day[month-1]+1):
+        print(i,"\t",end='')
+        if(i+space[month-1])%7 == 0:
+            print()
+
+
+def calendar_service():
+    while True:
+        month = input('원하는 월[1년치는 13]을 입력하시오 >>> ')
+        if month not in ['1','2','3','4','5','6','7','8','9','10','11','12','13']: #오류처리
+            print('잘못된 입력입니다.{1~13 사이의 값을 입력하세요}')
+            print()
+            continue
+        month = int(month)
+        if month == 13:
+            for i in range(1,13):
+                call_calendar(i)
+                print()
+                pass
+            pass
+        else:
+            call_calendar(month)
+            print()
+        is_go = input('계속하시겠습니까? [1:yes 0:no]')
+        if is_go != '1':
+            print("사용해 주셔서 감사합니다.")
+            break
+코드에서 월요일은 0임,
+
+import datetime
+
+from datetime import datetime
+a=datetime.now()
+print(a)
+
+from datetime import datetime
+a=datetime.now()
+datetime.now()
+
+print(a.year)
+print(a.month)
+print(a.day)
+print(a.hour)
+print(a.min)
+print(a.second)
+print('date: ',a.date())
+
+import calendar
+
+cal_data=calendar.monthrange(2022,6)
+print(cal_data)
+---------------------------
+만년 달력
+import calendar
+def call_calendar(year,month):
+    print("{}년{}월".format(year,month))
+    print("일\t월\t화\t수\t목\t금\t토")
+    cal_data = calendar.monthrange(year,month)
+    space = (cal_data[0]+1)%7
+    last_day = cal_data[1]
+    for _ in range(space):
+        print("\t",end='')
+    for i in range(1,last_day+1):
+        print(i,"\t",end='')
+        if(i+space)%7 == 0:
+            print()
+
+데이터를 한군데로 모을땐 대괄호를 써서 데이터를 모아줌
+ex for sjuan in [kin,lee,park]
+표의 형태에서 데이터에 접근할때는
+행,> 열 
+
+함수의 선언부와 구현부로 나눠짐↓
+
+def juan(subject):
+        total= 0
+        for i in range(len(score_cards)):
+            total= total+score_cards[i][subject]
+            pass
+         
+        return total
+]
+len(score_cards[0])
+
+키값이 있기 때문에 딕셔너리는 순서를 보장하지 않음
+리스트는 순서가 지켜져야함
+파이썬에서 컬렉션은 데이터를 집합으로 다루는 기능을 함
+
+-------------------------------------------------------------------------------------------------------------------------
+# 피보나치의 수열
+# 피보나치수열의 특성상 첫번째 수열과 2번째 수열은 동일하게 가져감
+
+def fibonacci(n):
+    if n==1:
+        return 1
+    if n==2:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+    
+print("fibonacci(1):",fibonacci(1))
+print("fibonacci(2):",fibonacci(2))
+print("fibonacci(3):",fibonacci(3))
+print("fibonacci(4):",fibonacci(4))
+print("fibonacci(5):",fibonacci(5))
+print("fibonacci(6):",fibonacci(6))
+print("fibonacci(7):",fibonacci(7))
+print("fibonacci(8):",fibonacci(8))
+print("fibonacci(9):",fibonacci(9))
+print("fibonacci(10):",fibonacci(10))
+print("fibonacci(11):",fibonacci(11))
+print("fibonacci(12):",fibonacci(12))
+------------------------------------------------------------------------------
+def fibonacci(n):
+    if n==1:
+        return 1
+    if n==2:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+
+
+fibonacci(13)
+------------------------------------
+임의수를 넣어서 미리 작성해놓은 리스트에 넣은후 숫자를 랜덤으로 배치함 ,그후 오름차순으로 정렬시키는 방법
+range(10)
+numbers = list(range(1,10+1))
+
+print(numbers)
+
+
+	문제
+#위의 numbers 를 섞어서 출력하시오
+#인덱스가 0~9인 임의수 2개를 생성해서 #index 1 <- 임의수 
+#해당 자리의 데이터를 교환한다
+#위의 작업을 적절히 반복한다
+import random
+index1 = random.randrange(0,9+1)
+index2 = random.randrange(0,9+1)
+print(index1,index2)
+
+for _ in range(10):
+    index1 = random.randrange(0,9+1)
+    index2 = random.randrange(0,9+1)
+    temp = numbers[index1]
+    numbers[index1] = numbers[index2]
+    numbers[index2] = temp
+
+print(numbers)
+------------
+파일 여는 코드
+
+path='./data/Abc1115.csv'
+file=open(path,'r')
+lines=file.readlines()
+len(lines)
+
+
+type(lines)
+
+lines(0:10)
+
+# lines를 한줄씩 출력하고 흰줄을,로 분리하고 분리한것을 리스트에 추가하는 코드 작성!
+student_info =[]
+for line in lines:
+    temp = line[0:-1].split(',')
+    student_info.append(temp)
+#     print(temp)
+#     break
+
+----
+빈공간 없애는 법 strip
+
+======================================
+다형성 1코드 - 자동타입변환
+
+부모 클래스에 있는 메소드 등을 자식클래스에서 그대로 사용 가능
+단, 같은 필드나 메소드가 있을 경우 부모 클래스가 아닌 자식 클래스 것으로 재정의 -> 오버라이드
+(super 키워드를 통하면 부모 클래스의 메소드를 호출할 수 있음)
+
+자동타입변환이 일어난 경우 자식 클래스에서 부모 클래스에 없는 메소드 등은 호출 불가
+
+다형성 2코드 - 강제타입변환
+
+부모 클래스에 자동으로 변환된 자식 클래스를 환원
+자식 클래스에만 있는 메소드 등은 다시 강제타입변환 해야 호출 가능
+두 클래스에 모두 있던 메소드의 경우 부모 쪽의 것은 숨김이 취소되어 다시 호출 가능
+
+인터페이스
+개발코드 수정 없이 사용하는 객체를 변경하도록 하기 위해 도입
+클래스에 준하는 용도로 사용 (일반 클래스 → 추상 클래스 → 인터페이스)
+인스턴스, 정적 필드는 선언 불가 + 추상 메소드 선언하고 하위 클래스에서 구체적으로 메소드 선언 필요
+
+클래스의 상속처럼, 인터페이스는 구현 존재 
+(단, 다중 상속이 금지되는 것과 달리 구현은 다중으로 사용 가능. 콤마로 열거)
+
+다형성 I, II 원칙 → 인터페이스에도 그대로 존재
+
+중첩 클래스
+클래스 내부에 선언하는 클래스. 인스턴스 형식, 정적 형식으로 선언 가능하고 심지어 메소드 내에 로컬 클래스로도 선언 가능
+공개를 거부할 때 클래스 내부에서 클래스를 선언하거나, 특정한 클래스와의 종속 관계를 나타내고 싶을 때 활용.
+
+outer - inner 클래스 관계: A$B 
+outer - local 클래스 관계: A$1B
+
+중첩 클래스가 존재할 경우 
+인스턴스 멤버 클래스는 outer 클래스 바깥에서 inner의 객체를 만들고 싶으면 outer 객체 생성 후 inner 객체를 생성
+정적 멤버(static) 클래스는 outer 객체 생성하지 않고 곧바로 inner 객체 생성 (인스턴스는 b.~ 시작 / 정적은 A.B.~로 시작)
+
+사용 제한
+인스턴스 멤버 클래스 내부 - 바깥 클래스의 모든 멤버/메소드 접근 가능 (인스턴스, static)
+정적 멤버 클래스 내부 - 정적 멤버와 메소드에만 접근 가능 (인스턴스 불가)
+
+멀티 스레드
+메인 스레드(메인 메소드) 시작 후 작업 스레드를 생성해 병렬로 코드를 실행해 멀티 태스킹을 수행
+객체 생성 -> start() -> 메소드 풀로 이동 -> Runnable 인터페이스 -> run() 메소드 -> 작업 처리
+
+익명 구현 개체를 이용
+스레드에서만 쓰려고 하는데 클래스를 생성하는건 낭비 
+-> new Thread에 바로 new Runnable 인터페이스 실행하고 즉석에서 run() 메소드 생성
+-> 바로 객체를 생성할 수 있음
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
